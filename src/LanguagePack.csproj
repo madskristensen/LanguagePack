@@ -45,6 +45,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="LanguagePackPackage.cs" />
+    <Compile Include="source.extension.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>source.extension.vsixmanifest</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\LICENSE.txt">
@@ -61,6 +66,8 @@
     </Content>
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
+      <Generator>VsixManifestGenerator</Generator>
+      <LastGenOutput>source.extension.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
