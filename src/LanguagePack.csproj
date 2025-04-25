@@ -56,7 +56,7 @@
       <Link>Resources\LICENSE.txt</Link>
       <IncludeInVSIX>true</IncludeInVSIX>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </Content>    
     <Content Include="Grammars\**\*">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
