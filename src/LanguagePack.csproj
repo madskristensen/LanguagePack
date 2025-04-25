@@ -15,9 +15,9 @@
     <RootNamespace>LanguagePack</RootNamespace>
     <AssemblyName>LanguagePack</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <GeneratePkgDefFile>false</GeneratePkgDefFile>
+    <GeneratePkgDefFile>true</GeneratePkgDefFile>
     <UseCodebase>true</UseCodebase>
-    <IncludeAssemblyInVSIXContainer>false</IncludeAssemblyInVSIXContainer>
+    <IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>
     <IncludeDebugSymbolsInVSIXContainer>false</IncludeDebugSymbolsInVSIXContainer>
     <IncludeDebugSymbolsInLocalVSIXDeployment>false</IncludeDebugSymbolsInLocalVSIXDeployment>
     <CopyBuildOutputToOutputDirectory>true</CopyBuildOutputToOutputDirectory>
@@ -60,9 +60,32 @@
     <Content Include="Grammars\**\*">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Resource Include="Icons\clojure.png" />
+    <Resource Include="Icons\d.png" />
+    <Resource Include="Icons\dart.png" />
+    <Resource Include="Icons\delphi.png" />
+    <Resource Include="Icons\elixir.png" />
+    <Resource Include="Icons\elm.png" />
+    <Resource Include="Icons\erlang.png" />
+    <Resource Include="Icons\fortran.png" />
+    <Resource Include="Icons\gradle.png" />
+    <Resource Include="Icons\haml.png" />
+    <Resource Include="Icons\haskell.png" />
+    <Resource Include="Icons\idris.png" />
+    <Resource Include="Icons\latex.png" />
+    <Resource Include="Icons\matlab.png" />
+    <Resource Include="Icons\nim.png" />
+    <Resource Include="Icons\puppet.png" />
+    <Resource Include="Icons\scala.png" />
+    <Resource Include="Icons\scheme.png" />
+    <Resource Include="Icons\solidity.png" />
+    <Resource Include="Icons\terraform.png" />
     <Content Include="Resources\Icon.png">
       <IncludeInVSIX>true</IncludeInVSIX>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Monikers.imagemanifest">
+      <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
@@ -74,9 +97,10 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="17.13.2126" NoWarn="NU1604">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
+    <PackageReference Include="Microsoft.VisualStudio.SDK">
+      <Version>17.0.32112.339</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="17.13.2126" NoWarn="NU1604" privateassets="all" IncludeAssets="none" excludeassets="all">
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
